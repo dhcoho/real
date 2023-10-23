@@ -1,4 +1,4 @@
-"use state"
+"use client"
 
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
