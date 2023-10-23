@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
@@ -12,7 +11,6 @@ const font = Poppins({
   weight: ["100","200","300","500","600","700","800"],
 });
 
-
 export default function RootLayout({
   children,
 }: {
@@ -21,14 +19,14 @@ export default function RootLayout({
   const pathname = usePathname();
 
   if(pathname.startsWith("/ilan/")) {
-    console.log("bro")
+    console.log("bro");
   }
 
   return (
     <html lang="en">
       <AuthProvider>
         <body className={font.className}>
-        {pathname === "/login" || pathname === "/register" || pathname === "/ilan" ? null : <Header />}
+          {pathname === "/login" || pathname === "/register" || pathname === "/ilan" ? null : <Header />}
 
           {children}
           {pathname === "/login" || pathname === "/register" || pathname === "/ilan" || pathname.startsWith("/ilan/") ? null : <MobileMenu />}
