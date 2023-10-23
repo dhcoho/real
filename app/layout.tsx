@@ -1,10 +1,13 @@
+"use client"
+
+
 import "./globals.css";
-import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import AuthProvider from "./Provider";
 import Header from "@/components/header/Header";
 import { usePathname } from "next/navigation";
 import MobileMenu from "@/components/component/mobileMenu/MobileMenu";
+import { metadata } from "./metadata"; // Import the metadata object
 
 const font = Poppins({ 
   subsets: ["latin"],
@@ -35,3 +38,4 @@ export default function RootLayout({
     </html>
   );
 }
+
