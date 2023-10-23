@@ -1,0 +1,73 @@
+/* style.css */
+
+/* Swiper container */
+.img_slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Main images */
+  .img_slider .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Thumbnail container */
+  .thumbnail_slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  
+  /* Thumbnails */
+  .thumbnail_slider .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+.swiper-button-disabled{
+    @apply hidden
+}
+
+.swiper-button-prev::after{
+    @apply bg-white shadow-xl px-[15px]  py-3 text-center rounded-full w-10 h-10 items-center justify-center active:scale-[0.98]
+}
+
+
+.swiper-button-prev::after{
+    @apply  text-[18px] text-blue-700 font-medium
+}
+
+
+.swiper-button-disabled{
+    @apply hidden
+}
+
+.swiper-button-next::after{
+    @apply bg-white shadow-xl px-[15px] py-3 text-center rounded-full w-10 h-10 items-center justify-center active:scale-[0.98]
+}
+
+
+.swiper-button-next::after{
+    @apply  text-[18px] text-blue-700 font-medium
+}
+
+
+.mySwiper{
+  @apply max-[750px]:hidden
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.7;
+  @apply active:ring
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  @apply border-2 border-blue-500 rounded-xl  ring ring-blue-200
+}
